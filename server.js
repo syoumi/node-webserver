@@ -36,6 +36,12 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/download', (req, res) => {
+    res.render('download.hbs', {
+        link: 'hahaha.pdf'
+    });
+});
+
 app.get('/bad', (req, res) => {
     var err = {
         errorMessage: 'Bad request'
