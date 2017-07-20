@@ -1,6 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 
+const port = process.env.PORT || 9090;
+
 var app = express();
 
 
@@ -11,7 +13,7 @@ app.use((req, res, next) => {
 });
 // app.use((req, res, next) => {
 //     console.log(req.ip, + ', ' + (new Date().toString()));
-//     res.render('maintenance.hbs'); aa
+//     res.render('maintenance.hbs');
 // });
 app.use(express.static(__dirname + '/public'));
 
@@ -42,6 +44,6 @@ app.get('/bad', (req, res) => {
     res.send(err);
 });
 
-app.listen(9090, () => {
-    console.log('Server waiting for connections');
+app.listen(port, () => {
+    console.log('Server waiting for connections on port ' + port);
 });
