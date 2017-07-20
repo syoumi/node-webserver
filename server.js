@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 });
 // app.use((req, res, next) => {
 //     console.log(req.ip, + ', ' + (new Date().toString()));
-//     res.render('maintenance.hbs');
+//     res.render('maintenance.hbs'); aa
 // });
 app.use(express.static(__dirname + '/public'));
 
